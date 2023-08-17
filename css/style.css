@@ -1,0 +1,301 @@
+:root {
+  --Strong-cyan: hsl(172, 67%, 45%);
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Dark-grayish-cyan: hsl(186, 14%, 43%);
+  --Grayish-cyan: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+  --Font-size: 24px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Space Mono", monospace;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  background-color: var(--Light-grayish-cyan);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* mobile */
+
+@media (min-width: 768px) {
+  section {
+    width: 750px;
+  }
+}
+
+/* medium */
+
+@media (min-width: 992px) {
+  section {
+    width: 970px;
+  }
+}
+
+/* large */
+
+@media (min-width: 1200px) {
+  section {
+    width: 1170px;
+  }
+}
+
+/* start header */
+img {
+  margin-top: 100px;
+  text-transform: uppercase;
+  letter-spacing: 12px;
+  color: var(--Very-dark-cyan);
+  margin-bottom: 100px;
+}
+/* end header */
+/* start section */
+section {
+width: auto;
+max-width: 100%;
+  background-color: var(--White);
+  padding: 40px;
+  border-radius: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section .tip {
+  width: 450px;
+  max-width: 100%;
+}
+/* start bill & people */
+section .people {
+  margin-top: 40px;
+}
+section .bill,
+.people {
+  display: grid;
+  position: relative;
+}
+section .bill::before {
+  content: "";
+  position: absolute;
+  background-image: url("../images/icon-dollar.svg");
+  background-repeat: no-repeat;
+  top: 50px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+}
+section .people::before {
+  content: "";
+  position: absolute;
+  background-image: url("../images/icon-person.svg");
+  background-repeat: no-repeat;
+  top: 50px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+}
+section .bill label,
+.people label {
+  margin-bottom: 8px;
+  color: var(--Dark-grayish-cyan);
+}
+section .bill input,
+.people input {
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background-color: var(--Very-light-grayish-cyan);
+  width: 100%;
+  padding: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--Very-dark-cyan);
+}
+section .bill input:focus,
+.people input:focus {
+  border: 2px solid var(--Strong-cyan);
+  border-radius: 4px;
+}
+
+section .bill input::placeholder,
+.people input::placeholder {
+  color: var(--Dark-grayish-cyan);
+  opacity: 70%;
+}
+section .people {
+  position: relative;
+}
+section .people p {
+  color: rgba(255, 0, 0, 0.692);
+  font-size: 14px;
+  position: absolute;
+  right: 10px;
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  section .bill input,
+  .people input {
+    width: 400px;
+  }
+  section .people p {
+    color: rgba(255, 0, 0, 0.692);
+    font-size: 14px;
+    position: absolute;
+    right: 55px;
+  }
+}
+@media (max-width: 991px) {
+  section {
+    width: 450px;
+  }
+  section .bill input,
+  .people input {
+    width: 22.2rem;
+  }
+}
+@media (max-width: 767px) {
+  section .bill input,
+  .people input {
+    width: 19rem;
+  }
+}
+/* end bill & people */
+/* start select tip */
+
+section .select-tip {
+  margin-top: 40px;
+}
+section .select-tip h3 {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: var(--Dark-grayish-cyan);
+}
+section .select-tip .box {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+section .select-tip .box span {
+  padding: 8px 40px;
+  width: 7.5rem;
+  background-color: var(--Very-dark-cyan);
+  color: white;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+section .select-tip .box input {
+  padding: 10px;
+  width: 7.5rem;
+  border-radius: 6px;
+  font-size: 24px;
+  border: none;
+  outline: none;
+  background-color: var(--Very-light-grayish-cyan);
+  color: var(--Very-dark-cyan);
+}
+section .select-tip .box input:focus {
+  border: 2px solid var(--Strong-cyan);
+}
+section .select-tip .box input::placeholder {
+  color: var(--Dark-grayish-cyan);
+  text-align: center;
+}
+@media (max-width: 991px) {
+  section .select-tip .box span {
+    width: 10.5rem;
+  }
+  section .select-tip .box input {
+    width: 10.5rem;
+  }
+}
+@media (max-width: 767px) {
+  section .select-tip .box span {
+    width: 9rem;
+  }
+  section .select-tip .box input {
+    width: 9rem;
+  }
+}
+/* end select tip */
+/* ######################################## */
+/* start output-tip */
+section .output-tip {
+  background-color: var(--Very-dark-cyan);
+  width: 450px;
+  border-radius: 10px;
+  padding: 40px;
+}
+section .output-tip .tip-amount {
+  margin-bottom: 40px;
+}
+section .output-tip .tip-amount,
+.total {
+  display: flex;
+  justify-content: space-between;
+}
+
+section .output-tip .tip-amount .text h3,
+.total .text h3 {
+  color: white;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+.output-tip .tip-amount .text p,
+.total .text p {
+  color: var(--Grayish-cyan);
+}
+.output-tip .tip-amount .output-amount,
+.total .output-total {
+  font-size: 48px;
+  color: var(--Strong-cyan);
+  margin-top: -10px;
+}
+.output-tip button {
+  height: 55px;
+  border-radius: 6px;
+  margin-top: 120px;
+  width: 100%;
+  outline: none;
+  border: none;
+  opacity: 15%;
+  background-color: var(--Strong-cyan);
+  font-size: 18px;
+  color: var(--Very-dark-cyan);
+  cursor: pointer;
+}
+.output-tip button:hover {
+  opacity: 100%;
+}
+@media (max-width: 991px) {
+  .output-tip {
+    margin-top: 30px;
+    padding: 40px 25px 25px 25px;
+    border-radius: 20px;
+  }
+  .output-tip button {
+    margin-top: 30px;
+  }
+  .output-tip .tip-amount .output-amount,
+  .total .output-total {
+    font-size: 36px;
+  }
+}
+/* end output-tip */
+
+/* ########################################### */
+/* end section */
